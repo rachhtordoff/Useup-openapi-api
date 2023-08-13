@@ -12,9 +12,7 @@ class Product(db.Model):
     brand = db.Column(db.String(64))
     image_url = db.Column(db.String(400))
     barcode = db.Column(db.String(400))
-
-    def __repr__(self):
-        return f'<Product {self.id}>'
+    status = db.Column(db.String(400))
 
     def to_dict(self):
         return {
@@ -26,5 +24,6 @@ class Product(db.Model):
             'date_added': self.date_added,
             'brand': self.brand,
             'image_url': self.image_url,
-            'barcode': self.barcode
+            'barcode': self.barcode,
+            'status': self.status
         }
