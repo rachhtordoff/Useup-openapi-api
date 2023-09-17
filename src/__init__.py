@@ -17,9 +17,9 @@ jwt = JWTManager(app)
 
 def register_blueprint(app):
     from src.routes.general import general_blueprint
-    from src.routes.products import products
+    from src.routes.openapi import openapi
     app.register_blueprint(general_blueprint)
-    app.register_blueprint(products)
+    app.register_blueprint(openapi)
 
 
 register_blueprint(app)
